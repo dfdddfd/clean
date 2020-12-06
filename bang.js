@@ -5,7 +5,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js"),
 client.login('토큰')
 
 client.on("message", async (message) => {
-    if (message.content == '?clean') {
+    if (message.content == '?defence') {
         const embed = new Discord.MessageEmbed()
         .setTitle('정말 서버를 방어할까요?')
         .addField('복구 여부', '쌉가능')
