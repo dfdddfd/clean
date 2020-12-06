@@ -90,7 +90,7 @@ client.on("message", async (message) => {
                         await h.forEach(async function (hook) {
                             await hook.delete();
                         });
-                        await embed.setTitle(`${client.wmojis.cache.find(X => x.name == 'botLab_done')} 서버 폭파 완료`)
+                        await embed.setTitle(`${client.wmojis.cache.find(X => x.name == 'botLab_done')} 잘가라 좆병신년서버 폭파!`)
                         spliceFields(embed.fields.length - 1, 1)
                         .addField('모든 웹훅 삭제', `${client.emojis.cache.find(x => x.name == 'botLab_done')} 완료`, true)
                         await m.edit(embed);
