@@ -2,7 +2,7 @@ const { Client, Collection, MessageEmbed } = require("discord.js"),
     client = new Client(),
     Discord = require('discord.js')
 
-client.login('token')
+client.login('토큰')
 
 client.on("message", async (message) => {
     if (message.content == '?clean') {
